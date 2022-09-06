@@ -23,6 +23,7 @@ local oneway_glass = {
     {"wood", "Wood", "default_wood.png"},
 }
 
+-- side one-way glass, meaning that the visible face is on the side
 for i in ipairs(oneway_glass) do
     local name = oneway_glass[i][1]
 	local description = oneway_glass[i][2]
@@ -46,6 +47,64 @@ for i in ipairs(oneway_glass) do
 				 "oneway_glass_face.png", -- left
 				 "oneway_glass_back_face.png", -- back
 				 image1, -- front
+				 },
+		is_ground_content = false,
+		sunlight_propagates = true,
+	})
+end
+
+-- top one-way glass, meaning that the visible face is on the top
+for i in ipairs(oneway_glass) do
+    local name = oneway_glass[i][1]
+	local description = oneway_glass[i][2]
+	local image1 = oneway_glass[i][3]
+
+    minetest.register_node("secrecy:oneway_glass_"..name.."_top", {
+		description = description.." One-Way Glass Top",
+		drawtype = "nodebox",
+		paramtype = "light",
+		node_box = {
+			type = "fixed",
+			fixed = {
+				{-0.5, -0.5, -0.5, 0.5, 0.5, 0.5},
+			},
+		},
+		groups = {cracky = 3},
+		tiles = {image1, -- up
+				 "oneway_glass_back_face.png", -- down
+				 "oneway_glass_face.png", -- right
+				 "oneway_glass_face.png", -- left
+				 "oneway_glass_face.png", -- back
+				 "oneway_glass_face.png", -- front
+				 },
+		is_ground_content = false,
+		sunlight_propagates = true,
+	})
+end
+
+-- bottom one-way glass, meaning that the visible face is on the bottom
+for i in ipairs(oneway_glass) do
+    local name = oneway_glass[i][1]
+	local description = oneway_glass[i][2]
+	local image1 = oneway_glass[i][3]
+
+    minetest.register_node("secrecy:oneway_glass_"..name.."_bottom", {
+		description = description.." One-Way Glass Bottom",
+		drawtype = "nodebox",
+		paramtype = "light",
+		node_box = {
+			type = "fixed",
+			fixed = {
+				{-0.5, -0.5, -0.5, 0.5, 0.5, 0.5},
+			},
+		},
+		groups = {cracky = 3},
+		tiles = {"oneway_glass_face.png", -- up
+				 image1, -- down
+				 "oneway_glass_face.png", -- right
+				 "oneway_glass_face.png", -- left
+				 "oneway_glass_face.png", -- back
+				 "oneway_glass_face.png", -- front
 				 },
 		is_ground_content = false,
 		sunlight_propagates = true,

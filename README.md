@@ -4,7 +4,7 @@ This mod is still under development, but aims to make all kinds of secret-room-r
 
 ## Inspiration
 
-This mod is inspired by, and borrows code ideas from [Abriglass](https://content.minetest.net/packages/mt-mods/abriglass/). The hidden doors idea comes from [MyDoors](https://content.minetest.net/packages/Don/mydoors/). Both Abriglass and MyDoors contain lots more than just one-way glass and hidden doors.
+This mod is inspired by, and borrows code ideas from [Abriglass](https://content.minetest.net/packages/mt-mods/abriglass/) and [MyDoors](https://content.minetest.net/packages/Don/mydoors/). Both Abriglass and MyDoors contain lots more than just one-way glass and hidden doors.
 
 ## What's it got so far?
 
